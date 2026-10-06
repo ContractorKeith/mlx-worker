@@ -100,7 +100,7 @@ How `mlx_delegate` behaves:
 - The worktree branches from `HEAD`, so uncommitted edits are invisible to it.
 - `node_modules`, `.venv`, and `venv` are linked from your repo into the worktree and never included in the diff. `$MLX_WORKER_REPO` points at your repo, so a Rust test can reuse its build cache: `CARGO_TARGET_DIR="$MLX_WORKER_REPO/target" cargo test`.
 - After a test failure the model gets the output and tries again, up to `maxAttempts` (default 2).
-- Thinking is off by default. On a 27B model at about 17 tokens a second, thinking on a large task can spend its whole budget reasoning and never answer. Keep tasks small.
+- Thinking is off by default. On a 27B model writing at 18 to 19 tokens a second, thinking on a large task can spend its whole budget reasoning and never answer. Keep tasks small.
 
 ## Configuration
 

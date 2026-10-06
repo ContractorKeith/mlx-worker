@@ -4,7 +4,7 @@ description: Delegate a small, well-specified, testable coding task to a local M
 license: MIT
 metadata:
   author: ContractorKeith
-  version: 1.0.0
+  version: 1.0.1
   domain: engineering
   scope: delegation
   output-format: reviewed-diff
@@ -14,7 +14,9 @@ metadata:
 # Delegating to the MLX worker
 
 The local model on the user's server Mac is a junior engineer on a private
-network. A 27B-class 4-bit model on an M2 Max runs at roughly 17 tokens a second.
+network. A 27B-class 4-bit model on an M2 Max writes about 18-19 tokens a
+second but reads prompts at only about 115 tokens a second, so every 1,000 tokens
+of `readFiles` adds roughly 9 seconds per attempt. Keep context tight.
 You stay the lead: you decide, specify, review, and own the result.
 
 ## Decide
