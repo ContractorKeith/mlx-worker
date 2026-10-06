@@ -1,0 +1,5 @@
+#!/bin/sh
+# MCP stdio launcher: runs the worker from this checkout with the system python3.
+# Requires MLX_WORKER_URL, e.g. https://my-server.my-tailnet.ts.net:8443
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+exec python3 -I -c 'import sys; sys.path.insert(0, sys.argv[1]); from mlx_worker.server import main; main()' "$DIR"

@@ -1,0 +1,5 @@
+interface:
+  display_name: Delegating to the MLX worker
+  short_description: Hand a small, testable coding task to a local MLX model on another Mac, then review and apply it.
+policy:
+  allow_implicit_invocation: true
